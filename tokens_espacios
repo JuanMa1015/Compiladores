@@ -1,0 +1,41 @@
+// Autómata espacios
+digraph {
+	rankdir=LR size="10,5"
+	node [fillcolor=white shape=circle style=filled]
+	S0 [label=S0]
+	S1 [label=S1 color=green fillcolor=lightgreen shape=doublecircle]
+	ERROR [label=ERROR color=red fillcolor=mistyrose shape=doublecircle]
+	S0 -> S1 [label="espacio, tab, salto" color=gray]
+	S1 -> S1 [label="espacio, tab, salto" color=gray]
+	S0 -> ERROR [label="'h'" color=blue penwidth=2.0]
+	S0 -> ERROR [label="'o'" color=orange penwidth=2.0]
+	S0 -> ERROR [label="'l'" color=green penwidth=2.0]
+	S0 -> ERROR [label="'a'" color=purple penwidth=2.0]
+	S0 -> S1 [label="' '" color=brown penwidth=2.0]
+	S0 -> ERROR [label="'c'" color=cyan penwidth=2.0]
+	S0 -> ERROR [label="'o'" color=darkgreen penwidth=2.0]
+	S0 -> ERROR [label="'m'" color=darkred penwidth=2.0]
+	S0 -> ERROR [label="'o'" color=gold penwidth=2.0]
+	S0 -> S1 [label="' '" color=blue penwidth=2.0]
+	S0 -> ERROR [label="'e'" color=orange penwidth=2.0]
+	S0 -> ERROR [label="'s'" color=green penwidth=2.0]
+	S0 -> ERROR [label="'t'" color=purple penwidth=2.0]
+	S0 -> ERROR [label="'a'" color=brown penwidth=2.0]
+	S0 -> ERROR [label="'s'" color=cyan penwidth=2.0]
+	label="Recorridos de tokens:
+h => Token inválido
+o => Token inválido
+l => Token inválido
+a => Token inválido
+  => Espacio en blanco
+c => Token inválido
+o => Token inválido
+m => Token inválido
+o => Token inválido
+  => Espacio en blanco
+e => Token inválido
+s => Token inválido
+t => Token inválido
+a => Token inválido
+s => Token inválido" labelloc=t
+}

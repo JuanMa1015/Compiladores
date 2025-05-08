@@ -1,0 +1,31 @@
+digraph automata {
+    rankdir=LR;
+    size="10,5";
+    node [shape = circle, style=filled, fillcolor=white];
+    S0 [label="S0"]
+    S1 [label="S1"]
+    ERROR [shape=doublecircle, color=red, fillcolor=mistyrose, label="ERROR"]
+    S1 [shape=doublecircle, color=green, fillcolor=lightgreen]
+    S0 -> S1 [label="Palabra clave, Identificador, Número, Operador", color=gray]
+    S0 -> S1 [label="3412", color=blue, penwidth=2.0]
+    S0 -> ERROR [label="if", color=orange, penwidth=2.0]
+    S0 -> S1 [label="hola", color=green, penwidth=2.0]
+    S0 -> S1 [label="me", color=purple, penwidth=2.0]
+    S0 -> S1 [label="gustas", color=brown, penwidth=2.0]
+    S0 -> S1 [label="quieres", color=cyan, penwidth=2.0]
+    S0 -> S1 [label="estar", color=blue, penwidth=2.0]
+    S0 -> S1 [label="con", color=orange, penwidth=2.0]
+    S0 -> S1 [label="1", color=green, penwidth=2.0]
+    labelloc="t";
+    label="Tokens procesados: 
+  3412 => Número sin signo válido\n
+  if => Palabra clave válida\n
+  hola => Identificador válido\n
+  me => Identificador válido\n
+  gustas => Identificador válido\n
+  quieres => Identificador válido\n
+  estar => Identificador válido\n
+  con => Identificador válido\n
+  1 => Número sin signo válido\n
+";
+}
